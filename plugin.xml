@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+xmlns:rim="http://www.blackberry.com/ns/widgets"
+xmlns:android="http://schemas.android.com/apk/res/android"
+           id="org.beuckman.geocoder"
+      version="0.3.10-dev">
+
+    <name>Geocoder</name>
+    <description>Cordova Geocoder Plugin</description>
+    <keywords>cordova,geolocation</keywords>
+    <repo>git@github.com:jbeuckm/cordova-plugin-geocoder.git</repo>
+
+    <!-- android -->
+    <platform name="android">
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        </config-file>
+
+    </platform>
+    
+    <!-- ios -->
+    <platform name="ios">
+
+        <js-module src="www/geocoder.js" name="geocoder">
+            <clobbers target="navigator.geocoder" />
+        </js-module>
+
+        <config-file target="config.xml" parent="/*">
+	        <feature name="Geocoder">
+	            <param name="ios-package" value="CDVGeocoder"/>
+	        </feature>
+        </config-file>
+        <header-file src="src/ios/CDVGeocoder.h" />
+        <source-file src="src/ios/CDVGeocoder.m" />
+        <framework src="CoreLocation.framework" />
+        
+        <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+            <string></string>
+        </config-file>
+        
+    </platform>
+
+
+
+</plugin>
