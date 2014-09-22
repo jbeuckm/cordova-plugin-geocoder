@@ -18,6 +18,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
         </config-file>
 
+        <source-file src="src/android/CDVGeocoder.java" target-dir="src/org/beuckman/geocoder" />         
+        
     </platform>
     
     <!-- ios -->
