@@ -16,11 +16,11 @@
 - navigator.geocoder.geocodeString
 
 
-## navigator.geolocation.geocodeString
+## navigator.geocoder.geocodeString
 
 Forward geocode a given address to find coordinates.
 
-    navigator.geolocation.geocodeString(addressString);
+    navigator.geocoder.geocodeString(addressString);
 
 ### Parameters
 
@@ -35,5 +35,5 @@ Forward geocode a given address to find coordinates.
         alert("The location is lat="+coords.latitude+", lon="+coords.longitude);
     }
 
-    navigator.geolocation.geocodeString(onSuccess, onError, "55418");
+    navigator.geocoder.geocodeString(onSuccess, onError, "55418");
 
