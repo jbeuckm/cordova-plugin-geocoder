@@ -41,7 +41,7 @@ public class CDVGeocoder extends CordovaPlugin {
 
     private void geocodeString(String addressString, CallbackContext callbackContext) {
 
-        geocoder = new Geocoder(cordova.getActivity().getApplicationContext());
+        geocoder = new Geocoder(getContext());
 
         if (addressString != null && addressString.length() > 0) {
 

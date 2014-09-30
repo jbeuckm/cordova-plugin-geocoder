@@ -10,6 +10,10 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <keywords>cordova,geolocation</keywords>
     <repo>git@github.com:jbeuckm/cordova-plugin-geocoder.git</repo>
 
+    <js-module src="www/geocoder.js" name="geocoder">
+        <clobbers target="navigator.geocoder" />
+    </js-module>
+    
     <!-- android -->
     <platform name="android">
         <config-file target="config.xml" parent="/*">
@@ -23,9 +27,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <!-- ios -->
     <platform name="ios">
 
-        <js-module src="www/geocoder.js" name="geocoder">
-            <clobbers target="navigator.geocoder" />
-        </js-module>
 
         <config-file target="config.xml" parent="/*">
 	        <feature name="Geocoder">
