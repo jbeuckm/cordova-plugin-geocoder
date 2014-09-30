@@ -22,23 +22,27 @@ public class CDVGeocoder extends CordovaPlugin {
 
     @Override
 	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-
-        geocoder = new Geocoder(cordova.getActivity().getApplicationContext());
-
         super.initialize(cordova, webView);
+                System.out.print("CDVGeocoder initialize");
 	}
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+        
         if (action.equals("geocodeString")) {
             String addressString = args.getString(0);
             this.geocodeString(addressString, callbackContext);
             return true;
         }
+
         return false;
+        
     }
 
     private void geocodeString(String addressString, CallbackContext callbackContext) {
+
+        geocoder = new Geocoder(getContext());
+
         if (addressString != null && addressString.length() > 0) {
 
             try {
