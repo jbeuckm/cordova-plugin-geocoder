@@ -10,6 +10,7 @@
 ## Supported Platforms
 
 - iOS
+- Android (soon)
 
 ## Methods
 
