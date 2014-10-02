@@ -16,23 +16,27 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     
     <!-- android -->
     <platform name="android">
+
         <config-file target="config.xml" parent="/*">
             <feature name="CDVGeocoder">
                 <param name="android-package" value="org.beuckman.geocoder.CDVGeocoder" />
             </feature>
         </config-file>
+        
+        <source-file src="src/android/org/beuckman/geocoder/CDVGeocoder.java" target-dir="src/org/beuckman/geocoder" />
+                 
     </platform>
 
     
     <!-- ios -->
     <platform name="ios">
 
-
         <config-file target="config.xml" parent="/*">
 	        <feature name="Geocoder">
 	            <param name="ios-package" value="CDVGeocoder"/>
 	        </feature>
         </config-file>
+
         <header-file src="src/ios/CDVGeocoder.h" />
         <source-file src="src/ios/CDVGeocoder.m" />
         <framework src="CoreLocation.framework" />
