@@ -23,7 +23,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             </feature>
         </config-file>
         
-        <source-file src="src/android/org/beuckman/geocoder/CDVGeocoder.java" target-dir="src/org/beuckman/geocoder" />
+        <source-file src="src/android/CDVGeocoder.java" target-dir="src/org/beuckman/geocoder" />
                  
     </platform>
 
