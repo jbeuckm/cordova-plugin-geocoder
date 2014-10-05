@@ -18,7 +18,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <platform name="android">
 
         <config-file target="config.xml" parent="/*">
-            <feature name="CDVGeocoder">
+            <feature name="Geocoder">
                 <param name="android-package" value="org.beuckman.geocoder.CDVGeocoder" />
             </feature>
         </config-file>

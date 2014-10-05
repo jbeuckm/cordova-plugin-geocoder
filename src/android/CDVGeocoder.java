@@ -58,6 +58,7 @@ public class CDVGeocoder extends CordovaPlugin {
                     coords.put("latitude", addr.getLatitude());
                     coords.put("longitude", addr.getLongitude());
 
+                    System.out.print(coords);
                     callbackContext.success(coords);
                 }
             

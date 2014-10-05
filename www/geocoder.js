@@ -3,7 +3,7 @@ var argscheck = require('cordova/argscheck'),
     utils = require('cordova/utils'),
     exec = require('cordova/exec');
     
-var geocoder = {
+var Geocoder = {
     /**
      * Forward geocodes a string.
      *
@@ -12,6 +12,7 @@ var geocoder = {
     geocodeString: function(successCallback, errorCallback, addressString) {
         exec(successCallback, errorCallback, "Geocoder", "geocodeString", [addressString]);
     }
+    
 };
 
-module.exports = geocoder;
+module.exports = Geocoder;
