@@ -3,7 +3,7 @@
 xmlns:rim="http://www.blackberry.com/ns/widgets"
 xmlns:android="http://schemas.android.com/apk/res/android"
            id="org.beuckman.geocoder"
-      version="0.3.10-dev">
+      version="0.1.0">
 
     <name>Geocoder</name>
     <description>Cordova Geocoder Plugin</description>
