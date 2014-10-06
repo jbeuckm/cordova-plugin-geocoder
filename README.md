@@ -10,7 +10,7 @@
 ## Supported Platforms
 
 - iOS
-- Android (soon)
+- Android
 
 ## Methods
 
@@ -21,7 +21,7 @@
 
 Forward geocode a given address to find coordinates.
 
-    navigator.geocoder.geocodeString(addressString);
+    navigator.geocoder.geocodeString(successCallback, errorCallback, addressString);
 
 ### Parameters
 
