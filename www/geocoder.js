@@ -7,10 +7,12 @@ var Geocoder = {
     /**
      * Forward geocodes a string.
      *
-     * @param {String} _string       The address string to be geocoded
+     * @param {String} _addessString       The address string to be geocoded
+     * @param {Int}    _nbMaxResults       [OPTIONAL] The maximum nb of results
      */
-    geocodeString: function(successCallback, errorCallback, addressString) {
-        exec(successCallback, errorCallback, "Geocoder", "geocodeString", [addressString]);
+    geocodeString: function(successCallback, errorCallback, addressString, nbMaxResults) {
+		nbMaxResults = nbMaxResults || '1'; // optional parameter which defaults to '1'
+        exec(successCallback, errorCallback, "Geocoder", "geocodeString", [addressString, nbMaxResults]);
     }
     
 };

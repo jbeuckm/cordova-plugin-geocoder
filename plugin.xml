@@ -7,7 +7,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 
     <name>Geocoder</name>
     <description>Cordova Geocoder Plugin</description>
-    <keywords>cordova,geolocation</keywords>
+    <keywords>cordova,geolocation,geocoder</keywords>
     <repo>git@github.com:jbeuckm/cordova-plugin-geocoder.git</repo>
 
     <js-module src="www/geocoder.js" name="geocoder">
@@ -39,8 +39,10 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 
         <header-file src="src/ios/CDVGeocoder.h" />
         <source-file src="src/ios/CDVGeocoder.m" />
+
         <framework src="CoreLocation.framework" />
-        
+        <framework src="MapKit.framework" />
+
         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
             <string></string>
         </config-file>
