@@ -7,6 +7,6 @@
 
 }
 
-- (void)geocodeString:(CDVInvokedUrlCommand*)command;
+- (void)geocodeString:(CDVInvokedUrlCommand*)command withParameters:(NSInteger)aParameter;
 
 @end
