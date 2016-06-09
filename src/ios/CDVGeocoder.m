@@ -4,7 +4,7 @@
 
 - (CDVPlugin*)initWithWebView:(UIWebView*)theWebView
 {
-    self = (CDVGeocoder*)[super initWithWebView:(UIWebView*)theWebView];
+    [self pluginInitialize];
 
     return self;
 }
