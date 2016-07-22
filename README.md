@@ -3,9 +3,7 @@
 
 ## Installation
 
-    git clone git@github.com:jbeuckm/cordova-plugin-geocoder.git
-    cd myproject
-    cordova plugin add ../cordova-plugin-geocoder
+    cordova plugin add https://github.com/jbeuckm/cordova-plugin-geocoder.git
 
 ## Supported Platforms
 
