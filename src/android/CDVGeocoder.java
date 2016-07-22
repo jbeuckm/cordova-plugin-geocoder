@@ -10,8 +10,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.List;
 
+import android.content.Context;
 import android.location.Geocoder;
 import android.location.Address;
+import android.view.inputmethod.InputMethodManager;
 
 /**
  * This class echoes a string called from JavaScript.
@@ -27,11 +29,17 @@ public class CDVGeocoder extends CordovaPlugin {
 	}
 
     @Override
-    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
         
         if (action.equals("geocodeString")) {
-            String addressString = args.getString(0);
-            this.geocodeString(addressString, callbackContext);
+            final String addressString = args.getString(0);
+            cordova.getThreadPool().execute(new Runnable() {
+                public void run() {
+
+                    geocodeString(addressString, callbackContext);
+                }
+            });
+
             return true;
         }
 
