@@ -3,7 +3,7 @@
 
 ## Installation
 
-    cordova plugin add https://github.com/Slumber86/cordova-plugin-geocoder.git
+    cordova plugin add https://github.com/jbeuckm/cordova-plugin-geocoder.git
 
 ## Supported Platforms
 
